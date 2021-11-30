@@ -1,12 +1,13 @@
-// import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Mainpage from "./Mainpage";
 import Upload from "./Uploadpage";
+import Identify from "./Identifypage";
+import Partner from "./Partnerpage";
 import NavBar from "./NavBar";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <NavBar />
@@ -14,10 +15,12 @@ function App() {
         <Switch>
           <Route path="/" exact component={Mainpage} />
           <Route path="/upload" component={Upload} />
+          <Route path="/identify" component={Identify} />
+          <Route path="/partner" component={Partner} />
         </Switch>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
